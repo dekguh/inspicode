@@ -1,0 +1,788 @@
+<!<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NO Lyfe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="owl/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="owl/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="animated/aos.css">
+    <link rel="stylesheet" type="text/css" href="lightbox/css/lightbox.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lilita+One');
+
+        html{
+            overflow-x: hidden;
+        }
+
+        body{
+            background-color: rgb(15, 15, 15);
+            color: #FFFFFF;
+        }
+
+        body, .wrapper{
+            min-height: 100%;
+        }
+
+        #particles-js{
+            position:absolute;
+            top:0;
+            width:100%;
+            height:100%;
+        }
+        /* offset */
+        .offset{
+            padding-top:6rem;
+        }
+
+        /* navbar */
+        .navbar-custom .navbar-brand img{
+            height: 4rem;
+        }
+
+        .navbar-custom .nav-link{
+            color: #FFFFFF;
+            font-weight: 700;
+        }
+
+        .navbar-custom .nav-link:hover{
+            color: rgb(88, 88, 88);
+        }
+
+        .navbar-custom .navbar-toggler{
+            border-color: #FFFFFF;
+        }
+
+        .navbar-custom .navbar-toggler-icon{
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
+        /* heading section */
+        .heading-section h2{
+            color: #FFFFFF;
+            font-family: 'Lilita One', cursive;
+            padding: 0;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .heading-section span{
+            color: rgb(212, 35, 35);
+        }
+
+        .hr{
+            width: 100%;
+            background: rgb(212, 35, 35);
+            height: 0.2rem;
+            margin: 1.8rem 0 0 0;
+        }
+
+        /* home */
+        .home-inner{
+            background-image: url("img/Indigo.png");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            position: relative;
+        }
+
+        .home-content{
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #FFFFFF;
+        }
+
+        .home-content h3{
+            color: #FFFFFF;
+            font-size: 6vh;
+        }
+
+        .home-content h3 span{
+            color: rgb(212, 35, 35);
+            font-weight: bold;
+        }
+
+
+        /* games */
+        .game-content{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100%;
+            max-height: 15rem;
+        }
+
+        .game-content .game-caption, .game-content .game-description{
+            background: none;
+            display: none;
+        }
+
+        .game-content:hover .game-caption{
+            display: block;
+            background-color: rgba(8, 8, 8, 0.644);
+            width: 100%;
+            height: 100%;
+            transition: 0.1s;
+            -webkit-transition: 0.1s;
+            -moz-transition: 0.1s;
+            -o-transition: 0.1s;
+            position: relative;
+        }
+
+        .game-content:hover .game-description{
+            display: block;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .game-description h4{
+            font-weight: bold;
+        }
+
+        .game-description ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .game-description ul li{
+            font-size: 3rem;
+        }
+
+        /* team */
+        .team-content{
+            width: 100%;
+            text-align: center;
+        }
+
+        .img-team{
+            margin: 0 auto;
+            height: 10rem;
+            width: 10rem !important;
+            border-radius: 50%;
+        }
+
+        .social-media{
+            font-size: 1.3rem;
+            color: #FFFFFF;
+        }
+
+        .social-media:hover{
+            color: #FFFFFF;
+        }
+
+        .team-content h4{
+            font-weight: bold;
+        }
+
+        .team-content h5{
+            color: rgb(138, 138, 138);
+            font-size: 1rem;
+        }
+
+        /* contact */
+        .form-contact{
+            border: none;
+            border-bottom: 0.05rem solid #FFFFFF;
+            border-radius: 0;
+            background: transparent;
+            color: #FFFFFF;
+        }
+
+        .form-contact:focus{
+            box-shadow: none;
+            background: transparent;
+            color: #FFFFFF;
+        }
+
+        .form-contact-textarea{
+            background: transparent;
+            border-color: #FFFFFF;
+            color: #FFFFFF;
+        }
+
+        .form-contact-textarea:focus{
+            background: transparent;
+            box-shadow: none;
+            color: #FFFFFF;
+        }
+
+        .map-content{
+            height: 18.5rem;
+            display: table;
+            width: 100%;
+        }
+
+        .map-content iframe{
+            display: table-cell;
+            vertical-align: middle;
+            height: 18rem;
+            border: none;
+            width: 100%;
+        }
+
+        .footer-inner{
+            background-color: rgb(10, 10, 10);
+        }
+
+        /* footer */
+        .copyright{
+            background-color: rgb(8, 8, 8);
+            padding: 0.5rem 0;
+        }
+
+        /* icon */
+        .android{
+            color: rgb(50, 206, 19);
+        }
+
+        .windows{
+            color: rgb(30, 88, 212);
+        }
+
+        .facebook{
+            color: rgb(6, 106, 255);
+        }
+
+        .instagram{
+            color: rgb(165, 11, 179);
+        }
+
+        .linkedin{
+            color: rgb(6, 106, 255);
+        }
+        
+        /* media */
+        @media (max-width:575.98px){
+            .navbar-custom .navbar-brand img{
+                height: 3rem;
+            }
+        }
+
+        @media (max-width:767.98px){
+            .hr{
+                margin: 0;
+            }
+
+            .navbar-collapse{
+                background-color: rgba(27, 27, 27, 0.644);
+                padding-left: 0.5rem;
+            }
+        }
+
+        @media (max-width:991.98px){
+            .home-inner{
+                background-color: rgb(8, 8, 8);
+                background-image: none;
+            }
+        }
+
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar">
+    <div class="wrapper">
+        <!--- home --->
+        <div id="home">
+            <div class="home-wrapper">
+                <div class="home-inner">
+                    <div id="particles-js"></div>
+                    <nav class="navbar navbar-expand-md navbar-custom">
+                        <div class="container">
+                            <a href="./" class="navbar-brand">
+                                <img src="img/logo.png" alt="">
+                            </a>
+                            <button class="navbar-toggler" data-toggle="collapse" data-target="#menuNav">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="menuNav">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                                    <li class="nav-item"><a href="#game" class="nav-link">Games</a></li>
+                                    <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+                                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="home-content d-block d-lg-none">
+                        <div class="container">
+                            <h3>We Make Awesome <span>Games</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--- Our game --->
+        <div id="game" class="offset">
+            <div class="game-wrapper">
+                <div class="game-inner">
+                    <div class="container">
+                        <div class="heading-section mb-3">
+                            <div class="row">
+                                <div class="col-md-auto text-center text-md-left">
+                                    <h2>Our <span>Games</span></h2>
+                                </div>
+                                <div class="col">
+                                    <hr class="hr"></hr>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="gameCarousel" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div style="background-image:url('img/satemania.png');" class="game-content">
+                                    <div class="game-caption">
+                                        <div class="game-description">
+                                            <h4>Sate Mania</h4>
+                                            <ul>
+                                                <li><i class="fab fa-android android"></i></li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 mx-auto">
+                                                    <a href="#"><img src="img/google-play.png" class="img-fluid"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div style="background-image:url('img/3.png');" class="game-content">
+                                    <div class="game-caption">
+                                        <div class="game-description">
+                                            <h4>Anak TI Zaman Now</h4>
+                                            <ul>
+                                                <li><i class="fab fa-android android"></i></li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 mx-auto">
+                                                    <a href="#"><img src="img/google-play.png" class="img-fluid"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div style="background-image:url('img/trap.png');" class="game-content">
+                                    <div class="game-caption">
+                                        <div class="game-description">
+                                            <h4>Not A Trap</h4>
+                                            <ul>
+                                                <li><i class="fab fa-android android"></i></li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 mx-auto">
+                                                    <a href="#"><img src="img/google-play.png" class="img-fluid"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div style="background-image:url('img/pejuang.png');" class="game-content">
+                                    <div class="game-caption">
+                                        <div class="game-description">
+                                            <h4>Pejuang Indonesia</h4>
+                                            <ul>
+                                                <li><i class="fab fa-android android"></i></li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 mx-auto">
+                                                    <h5 class="font-weight-bold">Coming Soon</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div style="background-image:url('img/juragan.png');" class="game-content">
+                                    <div class="game-caption">
+                                        <div class="game-description">
+                                            <h4>Juragan Warnet</h4>
+                                            <ul>
+                                                <li><i class="fab fa-android android"></i></li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 mx-auto">
+                                                    <h5 class="font-weight-bold">Coming Soon</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div style="background-image:url('img/Indigo.png');" class="game-content">
+                                    <div class="game-caption">
+                                        <div class="game-description">
+                                            <h4>Indigo</h4>
+                                            <ul>
+                                                <li><i class="fab fa-windows windows"></i></li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 mx-auto">
+                                                    <h5 class="font-weight-bold">Coming Soon</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--- our team --->
+        <div id="team" class="offset">
+            <div class="gallery-wrapper">
+                <div class="gallery-inner">
+                    <div class="container">
+                        <div class="heading-section mb-3">
+                            <div class="row">
+                                <div class="col-md-auto text-center text-md-left">
+                                    <h2>Our <span>Team</span></h2>
+                                </div>
+                                <div class="col">
+                                    <hr class="hr">
+                                    </hr>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="teamCarousel" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="team-content">
+                                    <img src="img/ceo.jpg" class="img-team" alt="">
+                                    <h4 class="pt-2">Ari Fathurriza</h4>
+                                    <h5>CEO & Founder</h5>
+                                    <a href="#" class="social-media"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" class="social-media"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="social-media"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="team-content">
+                                    <img src="img/jodi.jpg" class="img-team" alt="">
+                                    <h4 class="pt-2">Jodie Bonanza</h4>
+                                    <h5>Co-Founder & Programmer</h5>
+                                    <a href="#" class="social-media"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" class="social-media"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="social-media"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--- Gallery --->
+        <div id="gallery" class="offset">
+            <div class="gallery-wrapper">
+                <div class="gallery-inner">
+                    <div class="container">
+                        <div class="heading-section mb-3">
+                            <div class="row">
+                                <div class="col-md-auto text-center text-md-left">
+                                    <h2>Our <span>Gallery</span></h2>
+                                </div>
+                                <div class="col">
+                                    <hr class="hr">
+                                    </hr>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="img/melinda.jpg" class="img-fluid" alt="">
+                                <img src="img/gallery-5.jpg" class="img-fluid mt-1" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img src="img/ezra.jpg" class="img-fluid" alt="">
+                                <img src="img/gallery-3.jpg" class="img-fluid mt-1" alt="">
+                                <img src="img/gallery-4.jpg" class="img-fluid mt-1" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--- contact --->
+        <div id="Contact" class="offset">
+            <div class="contact-wrapper">
+                <div class="contact-inner">
+                    <div class="container">
+                        <div class="heading-section mb-3">
+                            <div class="row">
+                                <div class="col-md-auto text-center text-md-left">
+                                    <h2>Contact <span>us</span></h2>
+                                </div>
+                                <div class="col">
+                                    <hr class="hr">
+                                    </hr>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-content">
+                                    <form action="#">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <input type="text" class="form-control form-contact" placeholder="Name">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input type="email" class="form-control form-contact" placeholder="E-mail">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-12">
+                                                <input type="text" class="form-control form-contact" placeholder="subject">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-12">
+                                                <textarea class="form-control form-contact-textarea" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group text-center">
+                                            <button class="btn btn-outline-danger">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="map-content">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31540.535549160744!2d115.14021598408064!3d-8.826689492330589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd25b3a734a0435%3A0x30f3a0e2a964fbfa!2sUngasan%2C+South+Kuta%2C+Badung+Regency%2C+Bali!5e0!3m2!1sen!2sid!4v1552457125512" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-wrapper" class="offset">
+        <div class="copyright text-center clearfix px-5">
+            <span class="d-none d-md-inline-block float-left">
+                <a href="#" class="social-media"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-media"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-media"><i class="fab fa-twiiter"></i></a>
+            </span>
+            <span class="float-none float-md-right">copyright © 2019 <strong>Inspicode</strong> All rights reserved.</span>
+        </div>
+    </div>
+
+    <script src="js/popper.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="owl/owl.carousel.js"></script>
+    <script src="animated/aos.js"></script>
+    <script src="waypoint/jquery.waypoints.js"></script>
+    <script src="count/jquery.counterUp.js"></script>
+    <script src="countdown/countdown.min.js"></script>
+    <script src="lightbox/js/lightbox.js"></script>
+    <script src="particle/particles.js"></script>
+
+    <script>
+        particlesJS("particles-js", {
+        "particles": {
+            "number": {
+            "value": 109,
+            "density": {
+                "enable": true,
+                "value_area": 868.0624057955
+            }
+            },
+            "color": {
+            "value": "#ff0909"
+            },
+            "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 3,
+                "color": "#ff0000"
+            },
+            "polygon": {
+                "nb_sides": 3
+            },
+            "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+            }
+            },
+            "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+            },
+            "size": {
+            "value": 3.945738208161363,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+            },
+            "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+            },
+            "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+            "onhover": {
+                "enable": false,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+            },
+            "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+            }
+        },
+        "retina_detect": true
+        });
+        
+        $("#gameCarousel").owlCarousel({
+            loop:true,
+            margin: 10,
+            stagePadding:10,
+            autoplay:true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause:true,
+            items:1,
+            nav:true,
+            responsiveClass:true,
+            responsive:{
+                576:{
+                    items:1
+                },
+                768:{
+                    items:2
+                },
+                992:{
+                    items:3
+                }
+            }
+        });
+
+        $("#teamCarousel").owlCarousel({
+            loop:true,
+            margin: 10,
+            stagePadding:10,
+            autoplay:true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause:true,
+            items:1,
+            nav:true,
+            responsiveClass:true,
+            responsive:{
+                576:{
+                    items:1
+                },
+                768:{
+                    items:2
+                },
+                992:{
+                    items:3
+                }
+            }
+        });
+        
+        $(window).scroll(function () {
+                if ($(document).scrollTop() > 50) { 
+                    $(".navbar").addClass('fixed-top');
+                } else {
+                    $(".navbar").removeClass('fixed-top');
+                }
+            });
+    </script>
+</body>
+
+</html>
